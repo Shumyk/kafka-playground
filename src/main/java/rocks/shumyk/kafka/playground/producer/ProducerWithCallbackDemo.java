@@ -1,4 +1,4 @@
-package rocks.shumyk.kafka.playground;
+package rocks.shumyk.kafka.playground.producer;
 
 
 import org.apache.kafka.clients.producer.Callback;
