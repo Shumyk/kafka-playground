@@ -6,13 +6,13 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
 
-import static rocks.shumyk.kafka.playground.util.CommonUtil.createProperties;
+import static rocks.shumyk.kafka.playground.util.CommonUtil.createProducerProperties;
 
 public class ProducerDemo {
 
 	public static void main(String[] args) {
 		// create producer props
-		final Properties properties = createProperties();
+		final Properties properties = createProducerProperties();
 
 		// create the producer
 		try (KafkaProducer<String, String> producer = new KafkaProducer<>(properties)) {

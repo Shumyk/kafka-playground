@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 
-import static rocks.shumyk.kafka.playground.util.CommonUtil.createProperties;
+import static rocks.shumyk.kafka.playground.util.CommonUtil.createProducerProperties;
 
 public class ProducerWithKeysDemo {
 
@@ -19,7 +19,7 @@ public class ProducerWithKeysDemo {
 
 	public static void main(String[] args) throws ExecutionException, InterruptedException {
 		// create producer props
-		final Properties properties = createProperties();
+		final Properties properties = createProducerProperties();
 
 		// create the producer
 		try (KafkaProducer<String, String> producer = new KafkaProducer<>(properties)) {

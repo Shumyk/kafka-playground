@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Objects;
 import java.util.Properties;
 
-import static rocks.shumyk.kafka.playground.util.CommonUtil.createProperties;
+import static rocks.shumyk.kafka.playground.util.CommonUtil.createProducerProperties;
 
 public class ProducerWithCallbackDemo {
 
@@ -18,7 +18,7 @@ public class ProducerWithCallbackDemo {
 
 	public static void main(String[] args) {
 		// create producer props
-		final Properties properties = createProperties();
+		final Properties properties = createProducerProperties();
 		// create the producer
 		try (KafkaProducer<String, String> producer = new KafkaProducer<>(properties)) {
 			for (int i = 0; i < 10; i++) {
